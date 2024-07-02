@@ -1,0 +1,87 @@
+body {
+  background-color: bisque;
+}
+
+h1 {
+  font-size: 5rem;
+  color: blue;
+  text-align: center;
+}
+.container {
+  width: 95%;
+  margin: 100px auto;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  width: 350px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px 12px;
+  border-radius: 12px;
+  position: relative;
+}
+.li-list {
+  width: 70px;
+  height: 70px;
+}
+.list .li-list a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.icon {
+  font-size: 20px;
+  transition: all 1s;
+  z-index: 2;
+}
+.li-list:hover .icon {
+  transform: translateY(-60px);
+}
+.text {
+  position: absolute;
+  transform: translateY(70px);
+  transition: all 1s;
+  opacity: 0;
+}
+.li-list:hover .text {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.indicator {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: green;
+  border-radius: 100%;
+  top: -50px;
+  left: 0;
+  border: 8px solid bisque;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.li-list:nth-child(1):hover ~ .indicator {
+  transform: translateX(calc(70px * 0));
+}
+.li-list:nth-child(2):hover ~ .indicator {
+  transform: translateX(calc(70px * 1));
+}
+.li-list:nth-child(3):hover ~ .indicator {
+  transform: translateX(calc(70px * 2));
+}
+.li-list:nth-child(4):hover ~ .indicator {
+  transform: translateX(calc(70px * 3));
+}
+.li-list:nth-child(5):hover ~ .indicator {
+  transform: translateX(calc(70px * 4));
+}
